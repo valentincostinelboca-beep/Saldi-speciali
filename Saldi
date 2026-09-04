@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dami Saldi Speciali | Le migliori offerte del web</title>
+    <style>
+        :root {
+            --primary: #ff3838;
+            --dark: #1e272e;
+            --light: #f5f6fa;
+            --text: #2f3640;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Sezione Offerte */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 5px;
+            background-color: var(--primary);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Card Prodotto */
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .badge {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            align-self: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prices {
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .new-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: var(--dark);
+            color: white;
+            padding: 0.8rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: auto;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #888;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Dami <span>Saldi Speciali</span></div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tecnologia</a>
+            <a href="#">Moda</a>
+            <a href="#">Contatti</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Sconti Folli Selezionati per Te</h1>
+        <p>Ogni giorno le migliori occasioni del web in un unico posto.</p>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Le Offerte del Momento</h2>
+        
+        <div class="offers-grid">
+            <!-- Prodotto 1 -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="Cuffie" class="card-img">
+                <div class="card-content">
+                    <span class="badge">-40% SCONTO</span>
+                    <h3 class="card-title">Cuffie Wireless Premium</h3>
+                    <div class="prices">
+                        <span class="old-price">129€</span>
+                        <span class="new-price">79€</span>
+                    </div>
+                    <a href="#" class="btn">Vedi Offerta</a>
+                </div>
+            </div>
+
+            <!-- Prodotto 2 -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="Orologio" class="card-img">
+                <div class="card-content">
+                    <span class="badge">-50% METÀ PREZZO</span>
+                    <h3 class="card-title">Orologio Minimal Minimalist</h3>
+                    <div class="prices">
+                        <span class="old-price">199€</span>
+                        <span class="new-price">99€</span>
+                    </div>
+                    <a href="#" class="btn">Vedi Offerta</a>
+                </div>
+            </div>
+
+            <!-- Prodotto 3 -->
+            <div class="card">
+                <img src="https://unsplash.com" alt="Scarpe" class="card-img">
+                <div class="card-content">
+                    <span class="badge">SUPER PROMO</span>
+                    <h3 class="card-title">Scarpe Sportive Running</h3>
+                    <div class="prices">
+                        <span class="old-price">90€</span>
+                        <span class="new-price">45€</span>
+                    </div>
+                    <a href="#" class="btn">Vedi Offerta</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dami Saldi Speciali. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
+
